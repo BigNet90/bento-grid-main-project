@@ -1,6 +1,221 @@
-*{
+/* Purple 100: hsl(254, 88%, 90%)
+- Purple 500: hsl(256, 67%, 59%)
+
+- Yellow 100: hsl(31, 66%, 93%)
+- Yellow 500: hsl(39, 100%, 71%)
+
+- White: hsl(0, 0%, 100%)
+- Black: hsl(0, 0%, 7%) */
+* {
     box-sizing: border-box;
+    font-family: DM Sans;
 }
-html{
-    font-size: 20px;
+
+body {
+    display: grid;
+    max-width: 100vw;
+    min-height: 100vh;
+    justify-content: center;
+    align-content: center;
+}
+
+/* Main Container */
+#grid {
+    display: grid;
+    max-width: fit-content;
+    min-height: 100vh;
+    background-color: hsl(0, 0%, 100%);
+    padding: auto;
+}
+
+
+
+/* Content Container */
+
+#grid #grid-container {
+    display: inherit;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: min-content min-content 1fr;
+    gap: 5px;
+    padding: 4rem;
+    margin: 2rem;
+    width: 55rem;
+
+}
+
+/* BOX ONE*/
+.box-one {
+    grid-column: 1/1;
+    grid-row: 1/1;
+    background-color: hsl(31, 66%, 93%);
+    padding: 1rem;
+}
+
+.box-one-text {
+    max-width: 10em;
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+
+
+/* BOX TWO AND DESCENDANTS */
+.box-two {
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-rows: min-content min-content;
+    gap: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+.b2-text {
+    display: grid;
+    background-color: hsl(256, 67%, 59%);
+    width: 100%;
+    grid-area: span;
+    padding: 10px;
+    grid-column: 1/3;
+    justify-content: center;
+    padding: 10%;
+
+}
+
+.b2-text .box-two-text {
+    color: hsl(0, 0%, 100%);
+    font-weight: 400;
+    font-size: 2.5rem;
+}
+
+.b2-text .box-text2 {
+    font-size: smaller;
+}
+
+.box-two .box-three {
+    grid-column: 1/1;
+    background-color: hsl(0, 0%, 100%);
+
+}
+
+.box-two .box-four {
+    grid-column: 2/2;
+    background-color: hsl(39, 100%, 71%);
+}
+
+/* BOX THREE */
+.box-three-text {
+    font-size: large;
+    height: 10%;
+    max-width: 60%;
+    text-align: left;
+}
+
+/* BOX FOUR */
+.box-four-text {
+    font-size: large;
+    text-align: left;
+    max-width: 60%;
+}
+
+/* BOX FIVE */
+.box-five {
+    display: grid;
+    background-color: hsl(254, 88%, 90%);
+    align-content: center;
+    padding: 10px;
+}
+
+.box-five-text1 {
+    font-size: 1.5rem;
+    text-align: left;
+    max-width: 80%;
+    margin-block-end: 1rem;
+}
+
+.box-five-text2 {
+    font-size: medium;
+    margin-block-start: 1rem;
+    text-align: left;
+    max-width: 80%;
+}
+
+
+
+/* BOX SIX */
+.box-six {
+    display: grid;
+    grid-row: auto/3;
+    background-color: hsl(39, 100%, 71%);
+    padding: 15px;
+    gap: 5%;
+    justify-content: space-around;
+}
+
+.box-six-text {
+    text-align: left;
+    font-size: larger;
+    width: 60%;
+}
+
+/* BOX SEVEN */
+.box-seven {
+    display: grid;
+    background-color: hsl(0, 0%, 100%);
+    grid-column: 2/2;
+    width: max-content;
+}
+
+.box-seven-text {
+    text-align: center;
+    font-size: medium;
+}
+
+/* BOX EIGHT */
+.box-eight {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column: 3/4;
+    background-color: hsl(256, 67%, 59%);
+    color: hsl(0, 0%, 100%);
+    font-size: 18px;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+}
+
+.box-eight-text {
+    font-size: larger;
+    text-align: left;
+    max-width: 50%;
+}
+
+div {
+    padding: 10px;
+    justify-content: center;
+    justify-items: center;
+    border-radius: 5px;
+    max-width: fit-content;
+}
+
+p {
+    margin: 0;
+    max-width: max-content;
+    font-size: 2rem;
+    text-align: center;
+
+}
+
+img {
+    width: 100px;
+}
+
+/* Footer */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
 }
